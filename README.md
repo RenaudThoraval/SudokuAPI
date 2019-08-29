@@ -2,6 +2,10 @@
 
 Basic web API which validate and generate Sudoku grids.
 
+## Requisites
+
+.NET Core 3 (preview or later) is required in order to build & run this project.
+
 ## Run & Deploy
 
 *   Clone the repository
