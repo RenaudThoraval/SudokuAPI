@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using sudoku.Helpers;
+using Sudoku.Helpers;
 
-namespace sudoku.Models
+namespace Sudoku.Models
 {
     [SudokuGridValuesValidation]
     public class SudokuGrid
@@ -19,7 +19,7 @@ namespace sudoku.Models
         {
             try
             {
-                int[,] grid = (int[,])value;
+                var grid = (int[,])value;
                 if (grid.GetLength(0) != 9 || grid.GetLength(1) != 9)
                 {
                     return new ValidationResult("Grid must be a 9 x 9 matrix of numbers");
@@ -42,7 +42,7 @@ namespace sudoku.Models
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             // The model properties are already checked. We can cast without any problem "value" param.
-            SudokuGrid sudokuGrid = (SudokuGrid)value;
+            var sudokuGrid = (SudokuGrid)value;
             var helper = new SudokuHelper(sudokuGrid.Values);
 
             if (helper.ValidateGridValues())

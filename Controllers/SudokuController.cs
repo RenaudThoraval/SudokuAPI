@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using sudoku.Models;
-using sudoku.Helpers;
+using Sudoku.Models;
+using Sudoku.Helpers;
 
-namespace sudoku.Controllers
+namespace Sudoku.Controllers
 {
-	[Route("api/sudoku")]
-	public class SudokuController : Controller
-	{
-		#region Routes
+    [Route("api/sudoku")]
+    public class SudokuController : Controller
+    {
+        #region Routes
 
 		// POST api/sudoku/isValid
 		[HttpPost("isValid")]
