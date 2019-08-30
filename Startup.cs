@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Sudoku.Helpers;
 
 namespace Sudoku
 {
@@ -18,7 +19,7 @@ namespace Sudoku
         {
             // Add framework services.
             services.AddControllers()
-                    .AddNewtonsoftJson();
+                    .AddJsonOptions(x => x.JsonSerializerOptions.Converters.Add(new MultiArrayConverter()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

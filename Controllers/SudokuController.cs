@@ -9,6 +9,12 @@ namespace Sudoku.Controllers
     {
         #region Routes
 
+        [HttpPost]
+        public IActionResult TestParsing([FromBody]int[,] val)
+        {
+            return Ok(val);
+        }
+
 		// POST api/sudoku/isValid
 		[HttpPost("isValid")]
 		public IActionResult IsGridValid([FromBody]SudokuGrid grid)

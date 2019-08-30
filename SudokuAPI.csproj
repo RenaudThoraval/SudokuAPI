@@ -5,11 +5,9 @@
         <LangVersion>8.0</LangVersion>
     </PropertyGroup>
 
-    <ItemGroup>
-    </ItemGroup>
-
-    <ItemGroup>
+    <!-- <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="3.0.0-preview8.19405.7" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview8.19405.7" />
-    </ItemGroup>
+    </ItemGroup> -->
 
 </Project>
